@@ -14,13 +14,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body id="randomColor" class="bg-[#F4F7FF]">
     <style>
         * {
                 font-family: "Poppins", sans-serif;
                }
     </style>
-    <header class="bg-[#F4F7FF] w-full py-5">
+    <header class=" w-full py-5 randomColor">
         <nav class="flex justify-between w-5/6 bg-[#ffff] rounded-xl mx-auto
         p-4 shadow-sm">
             <div class="flex justify-between items-center gap-2">
@@ -29,13 +29,13 @@
             </div>
             <div class="flex justify-center gap-4 items-center ">
                 <img class="h-6 w-6" src="assets/checkbox.png" alt="">
-                <p class="text-2xl font-bold text-[#1E1E1E] mr-6">23</p>
-                <button><img class="h-8 w-8" src="assets/theme-btn.png" alt=""></button>
+                <p id="task" class="text-2xl font-bold text-[#1E1E1E] mr-6">23</p>
+                <button id="bg-btn"><img class="h-8 w-8" src="assets/theme-btn.png" alt=""></button>
             </div>
         </nav>
     </header>
-    <main class="w-full bg-[#F4F7FF]
-    flex gap-4 justify-center pb-8">
+    <main class="w-full
+    flex gap-4 justify-center pb-8 randomColor">
         <!-- task section -->
          <section class="w-[65%] bg-white rounded-xl">
             <!--task card container -->
@@ -44,17 +44,17 @@
                   <div class="rounded-full p-3 bg-white w-fit h-fit"><img class="" src="assets/checkbox.png" alt=""></div>
                    <div class="flex flex-col">
                      <p class="text-[#00303C] text-sm">Task Assigned</p>
-                     <h3 class="font-bold text-[#00303C] text-2xl">05</h3>
+                     <h3  class="font-bold text-[#00303C] text-2xl">0<span id="five">6</span></h3>
                    </div>
                 </div>
                 <div class="bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] col-span-2 rounded-xl flex justify-center items-center gap-5 pr-20 p-3 cursor-pointer">
                   <img class="h-14 w-14" src="assets/board.png" alt="">
-                  <p class="tracking-wider text-lg text-[#ffff] font-medium">Discover Something <br> New Today!</p>
+                  <p id="discover" class="tracking-wider text-lg text-[#ffff] font-medium">Discover Something <br> New Today!</p>
                 </div>
                 <div class="rounded-xl bg-[#F4F7FF] flex gap-4 items-center justify-center">
                 <img src="assets/calender.png" alt="">
-                    <p class="text-[#00303C] text-base">Wed ,<br>
-                    <span class="font-bold text-lg">Jul 28 2025</span> </p>
+                    <p id="liveDate" class="text-[#00303C] text-base"><span id="day">Wed</span> ,<br>
+                    <span class="font-bold text-lg"><span id="month">Jul</span>  <span id="date">28</span>  <span class="year">2025</span></span> </p>
                 </div>
                 
              </div>
@@ -65,7 +65,7 @@
                   <div class="bg-[#F4F7FF] rounded-xl flex flex-col gap-4 p-4">  <!-- card 1-->
                     <div class="flex flex-col gap-2">
                        <p class="text-[#00303C] py-1 px-3 w-fit bg-white rounded-lg text-xs">ShopEase</p>
-                       <h2 class="font-semibold text-[#00303C] text-lg">Fix Mobile Button Issue </h2>
+                       <h2 id="first-h2" class="font-semibold text-[#00303C] text-lg">Fix Mobile Button Issue </h2>
                        <p class="text-[#000000] text-xs font-light p-3 bg-white rounded-lg w-[98%]">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
                   </div>
                   <hr class="w-full mx-auto border-dotted border-[0.5px] border-[#3751fd18]">
@@ -76,13 +76,13 @@
                       21 March 2025
                        </span>
                        </p>
-                      <button class="h-fit w-fit bg-[#3752FD] px-4 py-2 text-white font-medium text-xs rounded-md hover:bg-[#00303C]">Completed</button>
+                      <button id="first-btn" class="h-fit w-fit bg-[#3752FD] px-4 py-2 text-white font-medium text-xs rounded-md hover:bg-[#00303C] disabled:bg-gray-300 disabled:text-gray-400  disabled:hover:bg-none">Completed</button>
                    </div>
                   </div>
                   <div class="bg-[#F4F7FF] rounded-xl flex flex-col gap-4 p-4">  <!-- card 2-->
                     <div class="flex flex-col gap-2">
                        <p class="text-[#00303C] py-1 px-3 w-fit bg-white rounded-lg text-xs">CloudSync</p>
-                       <h2 class="font-semibold text-[#00303C] text-lg">Add Dark Mode</h2>
+                       <h2 id="second-h2" class="font-semibold text-[#00303C] text-lg">Add Dark Mode</h2>
                        <p class="text-[#000000] text-xs font-light p-3 bg-white rounded-lg w-[98%]">Store user's preference in localStorage, update CSS variables dynamically, apply a smooth transition effect.</p>
                   </div>
                   <hr class="w-full mx-auto border-dotted border-[0.5px] border-[#3751fd18]">
@@ -93,13 +93,13 @@
                       25 March 2025
                        </span>
                        </p>
-                      <button class="h-fit w-fit bg-[#3752FD] px-4 py-2 text-white font-medium text-xs rounded-md hover:bg-[#00303C]">Completed</button>
+                      <button id="second-btn" class="h-fit w-fit bg-[#3752FD] px-4 py-2 text-white font-medium text-xs rounded-md hover:bg-[#00303C] disabled:bg-gray-300 disabled:text-gray-400  disabled:hover:bg-none ">Completed</button>
                    </div>
                   </div>
                   <div class="bg-[#F4F7FF] rounded-xl flex flex-col gap-4 p-4">  <!-- card 3-->
                     <div class="flex flex-col gap-2">
                        <p class="text-[#00303C] py-1 px-3 w-fit bg-white rounded-lg text-xs">SwiftPay</p>
-                       <h2 class="font-semibold text-[#00303C] text-lg">Optimize  Home page </h2>
+                       <h2 id="third-h2" class="font-semibold text-[#00303C] text-lg">Optimize  Home page </h2>
                        <p class="text-[#000000] text-xs font-light p-3 bg-white rounded-lg w-[98%]">Optimizing homepage involves several steps, including improving performance, enhancing design.</p>
                   </div>
                   <hr class="w-full mx-auto border-dotted border-[0.5px] border-[#3751fd18]">
@@ -110,13 +110,13 @@
                       15 April 2025
                        </span>
                        </p>
-                      <button class="h-fit w-fit bg-[#3752FD] px-4 py-2 text-white font-medium text-xs rounded-md hover:bg-[#00303C]">Completed</button>
+                      <button id="third-btn" class="h-fit w-fit bg-[#3752FD] px-4 py-2 text-white font-medium text-xs rounded-md hover:bg-[#00303C] disabled:bg-gray-300 disabled:text-gray-400  disabled:hover:bg-none ">Completed</button>
                    </div>
                   </div>
                   <div class="bg-[#F4F7FF] rounded-xl flex flex-col gap-4 p-4">  <!-- card 4-->
                     <div class="flex flex-col gap-2">
                        <p class="text-[#00303C] py-1 px-3 w-fit bg-white rounded-lg text-xs">Meta</p>
-                       <h2 class="font-semibold text-[#00303C] text-lg">Add new emoji 🤲 </h2>
+                       <h2 id="fourth-h2" class="font-semibold text-[#00303C] text-lg">Add new emoji 🤲 </h2>
                        <p class="text-[#000000] text-xs font-light p-3 bg-white rounded-lg w-[98%]">To add emoji, you can simply include it as part of your text or as standalone element.you can add in various ways</p>
                   </div>
                   <hr class="w-full mx-auto border-dotted border-[0.5px] border-[#3751fd18]">
@@ -127,13 +127,13 @@
                       10 May 2025
                        </span>
                        </p>
-                      <button class="h-fit w-fit bg-[#3752FD] px-4 py-2 text-white font-medium text-xs rounded-md hover:bg-[#00303C]">Completed</button>
+                      <button id="fourth-btn" class="h-fit w-fit bg-[#3752FD] px-4 py-2 text-white font-medium text-xs rounded-md hover:bg-[#00303C] disabled:bg-gray-300 disabled:text-gray-400  disabled:hover:bg-none ">Completed</button>
                    </div>
                   </div>
                   <div class="bg-[#F4F7FF] rounded-xl flex flex-col gap-4 p-4">  <!-- card 5-->
                     <div class="flex flex-col gap-2">
                        <p class="text-[#00303C] py-1 px-3 w-fit bg-white rounded-lg text-xs">Google LLC</p>
-                       <h2 class="font-semibold text-[#00303C] text-lg">Integrate OpenAI API </h2>
+                       <h2 id="fifth-h2" class="font-semibold text-[#00303C] text-lg">Integrate OpenAI API </h2>
                        <p class="text-[#000000] text-xs font-light p-3 bg-white rounded-lg w-[98%]">To integrate OpenAI API into your project, you'll need to follow the setup process using JavaScript (Node.js) or Python</p>
                   </div>
                   <hr class="w-full mx-auto border-dotted border-[0.5px] border-[#3751fd18]">
@@ -144,13 +144,13 @@
                       17 June 2025
                        </span>
                        </p>
-                      <button class="h-fit w-fit bg-[#3752FD] px-4 py-2 text-white font-medium text-xs rounded-md hover:bg-[#00303C]">Completed</button>
+                      <button id="fifth-btn" class="h-fit w-fit bg-[#3752FD] px-4 py-2 text-white font-medium text-xs rounded-md hover:bg-[#00303C] disabled:bg-gray-300 disabled:text-gray-400  disabled:hover:bg-none ">Completed</button>
                    </div>
                   </div>
                   <div class="bg-[#F4F7FF] rounded-xl flex flex-col gap-4 p-4">  <!-- card 6-->
                     <div class="flex flex-col gap-2">
                        <p class="text-[#00303C] py-1 px-3 w-fit bg-white rounded-lg text-xs">Glassdoar</p>
-                       <h2 class="font-semibold text-[#00303C] text-lg">Improve Job searching </h2>
+                       <h2 id="sixth-h2" class="font-semibold text-[#00303C] text-lg">Improve Job searching </h2>
                        <p class="text-[#000000] text-xs font-light p-3 bg-white rounded-lg w-[98%]">Improving the job search experience can involve enhancing both the user interface and user experience</p>
                   </div>
                   <hr class="w-full mx-auto border-dotted border-[0.5px] border-[#3751fd18]">
@@ -161,7 +161,7 @@
                       29 July 2025
                        </span>
                        </p>
-                      <button class="h-fit w-fit bg-[#3752FD] px-4 py-2 text-white font-medium text-xs rounded-md hover:bg-[#00303C]">Completed</button>
+                      <button id="sixth-btn" class="h-fit w-fit bg-[#3752FD] px-4 py-2 text-white font-medium text-xs rounded-md hover:bg-[#00303C] disabled:bg-gray-300 disabled:text-gray-400  disabled:hover:bg-none">Completed</button>
                    </div>
                   </div>
                      
@@ -174,11 +174,16 @@
                     <img class="h-4 w-4" src="assets/fi-sr-time-past.png" alt="">
                     <h3 class="text-[#00303C] text-base font-medium">Activity Log</h3>
                 </div>
-               <button class="h-fit w-fit bg-[#3752FD] px-4 py-2 text-white font-medium text-xs rounded-md hover:bg-[#00303C]">Clear History</button>
+               <button id="history" class="h-fit w-fit bg-[#3752FD] px-4 py-2 text-white font-medium text-xs rounded-md hover:bg-[#00303C]">Clear History</button>
               
            </div>
            <hr class="w-full mx-auto border-dotted border-[0.5px] border-[#3751fd18]">
+           <div id="empty-div" class="p-3 flex flex-col gap-4">
+
+           </div>
            </section>
     </main>
+    <script src="Scripts/script.js"></script>
+    <script src="Scripts/utility.js"></script>
 </body>
 </html>
