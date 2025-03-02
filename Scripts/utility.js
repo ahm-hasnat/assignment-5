@@ -34,9 +34,22 @@ function getTextById (id){
   p.style.fontSize = '10px';
   p.style.fontWeight = 'normal';
   p.style.fontFamily = 'Poppins', 'sans-serif';
+  
+  const disabledBtn =[];
+  const allBtn = ["first-btn","second-btn","third-btn","fourth-btn","fifth-btn","sixth-btn"];
+  for (let button of allBtn){
+    const btnId = document.getElementById(button);
+
+    if(btnId.disabled){
+      disabledBtn.push(button);
+    };
+  };
+  if ( disabledBtn.length === allBtn.length){
+    alert("Congrats!!! You have completed all the task Successfully")
+  }
 
  });
-
+ 
 };
 
 
